@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.domain.dao.RuleItemMapper">
+    <select id="findAllByRuleRealmId" resultType="com.domain.entity.RuleItem">
+        SELECT * FROM RULE_ITEM WHERE RULE_REALM_ID = #{ruleRealmId} AND DELETED = 0 ORDER BY ROW_NO ASC
+    </select>
+</mapper>
